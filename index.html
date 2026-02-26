@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True Well-Being Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Трекер прогресса</h1>
+        <p>Отмечай выполненные пункты и смотри динамику по дням.</p>
+      </header>
+
+      <section class="card">
+        <h2>Пункты на сегодня</h2>
+        <p class="muted">Можно менять список под пункты с твоей картинки.</p>
+
+        <form id="item-form" class="item-form">
+          <input
+            id="item-input"
+            type="text"
+            placeholder="Добавить новый пункт"
+            maxlength="120"
+          />
+          <button type="submit">Добавить</button>
+        </form>
+
+        <ul id="checklist" class="checklist" aria-live="polite"></ul>
+
+        <div class="actions">
+          <button id="save-day" class="primary">Сохранить за сегодня</button>
+          <button id="reset-today" class="ghost">Сбросить отметки</button>
+        </div>
+        <p id="save-status" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>Ретроспектива</h2>
+        <div id="summary" class="summary"></div>
+
+        <h3>История заполнений</h3>
+        <ul id="history" class="history"></ul>
+      </section>
+    </main>
+
+    <template id="check-item-template">
+      <li class="checklist__item">
+        <label>
+          <input type="checkbox" />
+          <span></span>
+        </label>
+        <button class="danger" type="button" aria-label="Удалить пункт">Удалить</button>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

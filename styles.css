@@ -1,0 +1,159 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1b2330;
+  --muted: #687385;
+  --primary: #2f80ed;
+  --danger: #d64545;
+  --border: #dbe2ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 20px 14px 32px;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.app__header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.card {
+  margin-top: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 3px 12px rgba(27, 35, 48, 0.05);
+}
+
+h2,
+h3 {
+  margin: 0 0 10px;
+}
+
+.muted {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.item-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+button.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+button.ghost {
+  background: #eef3fb;
+  color: #25477a;
+}
+
+button.danger {
+  padding: 7px 9px;
+  background: #fff1f1;
+  color: var(--danger);
+}
+
+.checklist,
+.history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.checklist__item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status {
+  min-height: 20px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #1f5c28;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.summary__item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fafcff;
+}
+
+.summary__item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.history li {
+  border-left: 4px solid var(--primary);
+  background: #fafcff;
+  padding: 8px 10px;
+  margin-bottom: 7px;
+}
